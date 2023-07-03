@@ -1,23 +1,24 @@
 import './App.css';
-function App() {
-  return (
-    <article className='tw-followCard'>
-      <header className='tw-followCard-header'>
-        <img
-          className='tw-followCard-avatar'
-          alt='El avatar de Sheyla'
-          src='https://unavatar.io/twitter/kikobeats'
-        />
-        <div className='tw-followCard-info'>
-          <strong>Sheyla Pérez del Valle</strong>
-          <span className='tw-followCard-infoUserName'>@sheylapdv</span>
-        </div>
-      </header>
+import TwitterFollowCard from './TwitterFollowCard';
 
-      <aside>
-        <button className='tw-followCard-button'>Seguir</button>
-      </aside>
-    </article>
+function App() {
+  const formatUserName = (userName) => `@${userName}`;
+
+  return (
+    <div className='App'>
+      <TwitterFollowCard
+        formatUserName={formatUserName}
+        isFollowing={true}
+        userName='SheylaPDV'
+        name='Sheyla Perez del Valle'
+      />
+      <TwitterFollowCard
+        formatUserName={formatUserName}
+        isFollowing={true}
+        userName='AlbertoBuenavida'
+        name='Alberto Buenavida'
+      />
+    </div>
   );
 }
 
