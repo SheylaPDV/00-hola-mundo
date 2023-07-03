@@ -1,19 +1,21 @@
+import './App.css';
 function App() {
   return (
-    <article>
-      <header>
+    <article className='tw-followCard'>
+      <header className='tw-followCard-header'>
         <img
-          alt="El avatar de Sheyla"
-          src="https://unavatar.io/twitter/kikobeats"
+          className='tw-followCard-avatar'
+          alt='El avatar de Sheyla'
+          src='https://unavatar.io/twitter/kikobeats'
         />
-        <div>
+        <div className='tw-followCard-info'>
           <strong>Sheyla Pérez del Valle</strong>
-          <span>@sheylapdv</span>
+          <span className='tw-followCard-infoUserName'>@sheylapdv</span>
         </div>
       </header>
 
       <aside>
-        <button>Seguir</button>
+        <button className='tw-followCard-button'>Seguir</button>
       </aside>
     </article>
   );
