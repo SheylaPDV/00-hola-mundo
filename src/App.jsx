@@ -2,18 +2,18 @@ import './App.css';
 import TwitterFollowCard from './TwitterFollowCard';
 
 function App() {
-  const formatUserName = (userName) => `@${userName}`;
+  const format = (userName) => `@${userName}`;
 
   return (
     <div className='App'>
       <TwitterFollowCard
-        formatUserName={formatUserName}
+        formatUserName={format}
         isFollowing={true}
         userName='SheylaPDV'
         name='Sheyla Perez del Valle'
       />
       <TwitterFollowCard
-        formatUserName={formatUserName}
+        formatUserName={format}
         isFollowing={true}
         userName='AlbertoBuenavida'
         name='Alberto Buenavida'
